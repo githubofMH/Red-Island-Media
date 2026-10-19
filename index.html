@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Red Island Media</title>
+  
+    <meta name="description" content="Madagascar's economy, explained">
+    
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="site-header">
+
+    <div class="site-header__inner">
+
+        <!-- Logo and website name -->
+        <a href="index.html" class="site-brand">
+            <img
+                src="images/logo.png"
+                alt=""
+                width="40"
+                height="40">
+            <span>Red Island Media</span>
+        </a>
+
+
+        <!-- Mobile navigation button -->
+        <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
+            <span aria-hidden="true">&#9776;</span>
+        </button>
+
+
+        <!-- Main navigation -->
+        <nav
+            class="primary-navigation"
+            id="primary-navigation"
+            aria-label="Main navigation">
+
+            <ul class="nav-list">
+
+                <!-- Publications dropdown -->
+                <li class="nav-item nav-item--dropdown">
+
+                    <button
+                        type="button"
+                        class="nav-link dropdown-toggle"
+                        aria-expanded="false"
+                        aria-controls="publications-menu">
+                        Publications
+                    </button>
+
+                    <ul
+                        class="dropdown-menu"
+                        id="publications-menu">
+
+                        <li>
+                            <a href="beyond-the-headlines.html">
+                                Beyond the Headlines
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="data-insights.html">
+                                Data Insights
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="publications.html">
+                                All Publications
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- Discussion -->
+                <li class="nav-item">
+                    <a href="discussion.html" class="nav-link">
+                        Discussion
+                    </a>
+                </li>
+
+
+                <!-- Podcast -->
+                <li class="nav-item">
+                    <a href="podcast.html" class="nav-link">
+                        Podcast
+                    </a>
+                </li>
+
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <!-- Main content -->
+  
+<main>
+
+    <!-- Beyond the Headlines carousel -->
+    <section id="beyond-the-headlines" class="publication-section">
+
+        <div class="section-header">
+            <h2>Beyond the Headlines</h2>
+
+            <div class="carousel-controls">
+                <button
+                    type="button"
+                    class="carousel-button"
+                    data-carousel="beyond-the-headlines"
+                    data-direction="previous"
+                    aria-label="Previous Beyond the Headlines articles">
+                    &larr;
+                </button>
+
+                <button
+                    type="button"
+                    class="carousel-button"
+                    data-carousel="beyond-the-headlines"
+                    data-direction="next"
+                    aria-label="Next Beyond the Headlines articles">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-viewport">
+            <div class="carousel-track" id="beyond-the-headlines-track">
+                <!-- JavaScript will insert the three latest articles here. -->
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Data Insights carousel -->
+    <section id="data-insights" class="publication-section">
+
+        <div class="section-header">
+            <h2>Data Insights</h2>
+
+            <div class="carousel-controls">
+                <button
+                    type="button"
+                    class="carousel-button"
+                    data-carousel="data-insights"
+                    data-direction="previous"
+                    aria-label="Previous Data Insights articles">
+                    &larr;
+                </button>
+
+                <button
+                    type="button"
+                    class="carousel-button"
+                    data-carousel="data-insights"
+                    data-direction="next"
+                    aria-label="Next Data Insights articles">
+                    &rarr;
+                </button>
+            </div>
+        </div>
+
+        <div class="carousel-viewport">
+            <div class="carousel-track" id="data-insights-track">
+                <!-- JavaScript will insert the three latest articles here. -->
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Article card template -->
+<template id="article-card-template">
+
+    <a class="article-card" href="">
+
+        <img
+            class="article-card__image"
+            src=""
+            alt="">
+
+        <h3 class="article-card__title"></h3>
+
+        <time class="article-card__date"></time>
+
+        <p class="article-card__author"></p>
+
+    </a>
+
+</template>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Red Island Media. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
