@@ -189,3 +189,142 @@ button {
     color: var(--color-heading);
 }
 
+
+
+/* ========================================
+   7. Main content
+======================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 32px 64px;
+}
+
+
+/* ========================================
+   8. Publication sections
+======================================== */
+
+.publication-section + .publication-section {
+    margin-top: 56px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.publication-section h2 {
+    margin: 0;
+    color: var(--color-heading);
+    font-size: clamp(24px, 2.5vw, 32px);
+    line-height: 1.25;
+}
+
+
+/* ========================================
+   9. Carousel controls
+======================================== */
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--color-olive);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-brand);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+    background-color: var(--color-caramel);
+    border-color: var(--color-caramel);
+    color: #000000;
+}
+
+
+/* ========================================
+   10. Carousel layout
+======================================== */
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+
+/* ========================================
+   11. Article cards
+======================================== */
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+
+    color: var(--color-text);
+}
+
+.article-card__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.article-card__title {
+    margin: 12px 0 6px;
+    color: var(--color-heading);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.article-card__date {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.article-card__author {
+    margin: 4px 0 0;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.article-card:hover .article-card__title {
+    color: var(--color-brand);
+}
+
