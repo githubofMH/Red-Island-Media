@@ -1,1 +1,191 @@
+/* ========================================
+   1. Global styles
+======================================== */
+:root {
+    /* Brand palette */
+    --color-desert-tan: #E5D1A4;
+    --color-brand: #480903;
+    --color-heading: #B64B12;
+    --color-caramel: #CE793A;
+    --color-olive: #937A24;
+
+    /* Text and interface */
+    --color-background: var(--color-desert-tan);
+    --color-text: #000000;
+    --color-accent: #480903;
+    --color-muted: #000000;
+    --color-border: rgba(147, 122, 36, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* ========================================
+   2. Header layout
+======================================== */
+
+.site-header {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-background);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+
+
+/* ========================================
+   3. Logo and website name
+======================================== */
+
+.site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--color-brand);
+
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.site-brand img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+/* ========================================
+   4. Main navigation
+======================================== */
+
+.primary-navigation {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 0;
+
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: var(--color-accent);
+}
+
+
+/* ========================================
+   5. Publications dropdown
+======================================== */
+
+.dropdown-toggle {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    content: " ▾";
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+
+    min-width: 220px;
+    margin: 0;
+    padding: 8px 0;
+
+    list-style: none;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+    color: var(--color-accent);
+    background-color: rgba(206, 121, 58, 0.12);
+}
+
+/* Show the dropdown on hover or keyboard focus */
+.nav-item--dropdown:hover .dropdown-menu,
+.nav-item--dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+
+/* ========================================
+   6. Mobile menu button
+======================================== */
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+/* Section headings */
+.publication-section h2 {
+    color: var(--color-heading);
+}
 
