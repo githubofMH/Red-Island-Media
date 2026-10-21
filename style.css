@@ -65,6 +65,7 @@ button {
    3. Logo and website name
 ======================================== */
 
+
 .site-brand {
     display: inline-flex;
     align-items: center;
@@ -73,18 +74,35 @@ button {
     color: var(--color-brand);
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
-    font-size: 20px;
-    font-weight: 700;
-    font-style: normal;
 
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .site-brand img {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
+}
+
+.site-brand__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.05;
+}
+
+.site-brand__name {
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.site-brand__descriptor {
+    font-size: 19px;
+    font-weight: 700;
+    font-style: italic;
 }
 
 
