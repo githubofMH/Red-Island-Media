@@ -71,6 +71,7 @@ button {
     gap: 12px;
 
     color: var(--color-brand);
+    font-family: "Newsreader", serif;
 
     flex-shrink: 0;
     font-size: 20px;
