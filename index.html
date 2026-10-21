@@ -1,261 +1,98 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Red Island Media</title>
-  
-    <meta name="description" content="Madagascar's economy, explained">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Island Media</title>
+  <link rel="stylesheet" href="style.css">
     
-<!-- To charge google fonts -->
+     <!-- To charge google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
 
-<!-- Header -->
-<header class="site-header">
-
-    <div class="site-header__inner">
-
-        <!-- Logo and website name -->
-        <a href="index.html" class="site-brand">
-    <img
-        src="images/logo.png"
-        alt=""
-        width="56"
-        height="56">
-
-    <span class="site-brand__text">
-        <span class="site-brand__name">Red Island</span>
-        <span class="site-brand__descriptor">Media</span>
-    </span>
-</a>
-
-        <!-- Mobile navigation button -->
-        <button
-            type="button"
-            class="menu-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation">
-            <span aria-hidden="true">&#9776;</span>
-        </button>
-
-
-        <!-- Main navigation -->
-        <nav
-            class="primary-navigation"
-            id="primary-navigation"
-            aria-label="Main navigation">
-
-            <ul class="nav-list">
-
-                <!-- Publications dropdown -->
-                <li class="nav-item nav-item--dropdown">
-
-                    <button
-                        type="button"
-                        class="nav-link dropdown-toggle"
-                        aria-expanded="false"
-                        aria-controls="publications-menu">
-                        Publications
-                    </button>
-
-                    <ul
-                        class="dropdown-menu"
-                        id="publications-menu">
-
-                        <li>
-                            <a href="beyond-the-headlines.html">
-                                Beyond the Headlines
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="data-insights.html">
-                                Data Insights
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="publications.html">
-                                All Publications
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- Discussion -->
-                <li class="nav-item">
-                    <a href="discussion.html" class="nav-link">
-                        Discussion
-                    </a>
-                </li>
-
-
-                <!-- Podcast -->
-                <li class="nav-item">
-                    <a href="podcast.html" class="nav-link">
-                        Podcast
-                    </a>
-                </li>
-
-                <!-- Search -->
-                <li class="nav-item">
-                    <button
-                        type="button"
-                        class="search-button"
-                        aria-label="Search">
-                
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            aria-hidden="true">
-                
-                            <circle cx="11" cy="11" r="7"></circle>
-                            <line x1="16.2" y1="16.2" x2="21" y2="21"></line>
-                
-                        </svg>
-                
-                    </button>
-                </li>
-
-                <!-- About -->
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        About
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
+  <header>
+    <div class="conteneur">
+      <a href="#" class="logo">Red Island Media</a>
+      <nav>
+        <a href="#produits">Publications</a>
+        <a href="#">Podcast</a>
+        <a href="#">About</a>
+      </nav>
     </div>
+  </header>
 
-</header>
+  <section class="heros">
+    <div class="conteneur">
+      <h1>Madagascar's economy,<br>explained</h1>
+      <p>Exploring Madagascar’s economy and development, an independent lens to explain what shapes your daily life.</p>
+      <a href="#produits" class="bouton">Latest publications</a>
+    </div>
+  </section>
 
-    <!-- Main content -->
-  
-<main>
+  <section class="sujets">
+    <div class="conteneur">
+      <div>Macroeconomics</div>
+      <div>Development Policies & Living Standards</div>
+      <div>Industries</div>
+      <div>Institutional Governance</div>
+    </div>
+  </section>
 
-    <!-- Beyond the Headlines carousel -->
-    <section id="beyond-the-headlines" class="publication-section">
+  <section class="articles" id="articles">
+    <div class="conteneur">
+      <h2>Beyound the Headlines</h2>
+      <div class="grille">
 
-        <div class="section-header">
-            <h2>Beyond the Headlines</h2>
+        <article class="carte">
+  <img src="images/images/logo.png" alt="logo">
+  <div class="infos">
+    <h3>logo</h3>
+    <p>date du jour</p>
+    <p>Mathieu Houpier</p>
+  </div>
+</article>
 
-            <div class="carousel-controls">
-                <button
-                    type="button"
-                    class="carousel-button"
-                    data-carousel="beyond-the-headlines"
-                    data-direction="previous"
-                    aria-label="Previous Beyond the Headlines articles">
-                    &larr;
-                </button>
+        <article class="carte">
+  <img src="images/images/logo.png" alt="logo">
+  <div class="infos">
+    <h3>logo</h3>
+    <p>date du jour</p>
+    <p>Mathieu Houpier</p>
+  </div>
+</article>
 
-                <button
-                    type="button"
-                    class="carousel-button"
-                    data-carousel="beyond-the-headlines"
-                    data-direction="next"
-                    aria-label="Next Beyond the Headlines articles">
-                    &rarr;
-                </button>
-            </div>
-        </div>
+        <article class="carte">
+  <img src="images/images/logo.png" alt="logo">
+  <div class="infos">
+    <h3>logo</h3>
+    <p>date du jour</p>
+    <p>Mathieu Houpier</p>
+  </div>
+</article>
 
-        <div class="carousel-viewport">
-            <div class="carousel-track" id="beyond-the-headlines-track">
-                <!-- JavaScript will insert the three latest articles here. -->
-            </div>
-        </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <section class="newsletter">
+    <div class="conteneur">
+      <h2>stay in the light e</h2>
+      <p>Critical thinking is necessary for a nation to prosper.</p>
+      <form>
+        <input type="email" placeholder="Ton adresse e-mail">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </section>
 
-
-    <!-- Data Insights carousel -->
-    <section id="data-insights" class="publication-section">
-
-        <div class="section-header">
-            <h2>Data Insights</h2>
-
-            <div class="carousel-controls">
-                <button
-                    type="button"
-                    class="carousel-button"
-                    data-carousel="data-insights"
-                    data-direction="previous"
-                    aria-label="Previous Data Insights articles">
-                    &larr;
-                </button>
-
-                <button
-                    type="button"
-                    class="carousel-button"
-                    data-carousel="data-insights"
-                    data-direction="next"
-                    aria-label="Next Data Insights articles">
-                    &rarr;
-                </button>
-            </div>
-        </div>
-
-        <div class="carousel-viewport">
-            <div class="carousel-track" id="data-insights-track">
-                <!-- JavaScript will insert the three latest articles here. -->
-            </div>
-        </div>
-
-    </section>
-
-</main>
-
-<!-- Article card template -->
-<template id="article-card-template">
-
-    <a class="article-card" href="">
-
-        <img
-            class="article-card__image"
-            src=""
-            alt="">
-
-        <h3 class="article-card__title"></h3>
-
-        <time class="article-card__date"></time>
-
-        <p class="article-card__author"></p>
-
-    </a>
-
-</template>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Red Island Media. All rights reserved.</p>
-    </footer>
+  <footer>
+    © 2026 Red Island Media – All rights reserved
+  </footer>
 
 </body>
-
 </html>
