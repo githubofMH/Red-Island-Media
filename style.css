@@ -209,3 +209,27 @@ button {
 .publication-section h2 {
     color: var(--color-heading);
 }
+
+
+/* Search button */
+.search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus-visible {
+    color: var(--color-accent);
+}
+
+
