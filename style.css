@@ -72,10 +72,12 @@ button {
 
     color: var(--color-brand);
     font-family: "Newsreader", serif;
-
-    flex-shrink: 0;
+    font-optical-sizing: auto;
     font-size: 20px;
     font-weight: 700;
+    font-style: normal;
+
+    flex-shrink: 0;
 }
 
 .site-brand img {
