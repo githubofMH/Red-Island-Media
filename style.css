@@ -1,235 +1,158 @@
-/* ========================================
-   1. Global styles
-======================================== */
-:root {
-    /* Brand palette */
-    --color-desert-tan: #E5D1A4;
-    --color-brand: #480903;
-    --color-heading: #B64B12;
-    --color-caramel: #CE793A;
-    --color-olive: #937A24;
+   /* ========== 1. VARIABLES ==========
+       Change ces couleurs et toute la page change d'ambiance. */
+    :root {
+      --fond: #e5d1a4;
+      --olive: #937a24;
+      --copper: #b64b12;
+      --caramel: #ce793a;
+      --texte: #2b2b2b;
+      --chestnut: #480903
+    }
 
-    /* Text and interface */
-    --color-background: var(--color-desert-tan);
-    --color-text: #000000;
-    --color-accent: #480903;
-    --color-muted: #000000;
-    --color-border: rgba(147, 122, 36, 0.35);
-}
+    /* ========== 2. BASE ========== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-* {
-    box-sizing: border-box;
-}
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--fond);
+      color: var(--texte);
+      line-height: 1.6;
+    }
 
-body {
-    margin: 0;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
+    a { color: inherit; text-decoration: none; }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+    /* Un conteneur centré qui limite la largeur du contenu */
+    .conteneur {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
 
-button {
-    font: inherit;
-}
+    /* ========== 3. EN-TÊTE (Flexbox) ========== */
+    header {
+      background: var(--olive);
+      color: var(--fond);
+    }
+    header .conteneur {
+      display: flex;                 /* aligne les éléments sur une ligne */
+      justify-content: space-between;/* un à gauche, un à droite */
+      align-items: center;
+      padding: 18px 0;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+    nav { display: flex; gap: 24px; font-size: 0.9rem; text-transform: uppercase; }
+    nav a:hover { color: var(--copper); }
 
+    /* ========== 4. HÉROS ========== */
+    .heros {
+      text-align: center;
+      padding: 100px 0 80px;
+    }
+    .heros h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem); /* taille qui s'adapte à l'écran */
+      color: var(--olive);
+      line-height: 1.1;
+    }
+    .heros p {
+      max-width: 520px;
+      margin: 20px auto 32px;
+      font-size: 1.15rem;
+    }
+    .bouton {
+      display: inline-block;
+      background: var(--copper);
+      color: var(--olive);
+      padding: 14px 32px;
+      border-radius: 999px;          /* bords totalement arrondis */
+      font-weight: bold;
+      transition: transform 0.2s;    /* animation douce */
+    }
+    .bouton:hover { transform: translateY(-3px); }
 
-/* ========================================
-   2. Header layout
-======================================== */
+    /* ========== 5. BANDEAU D'AVANTAGES (Grid) ========== */
+    .avantages {
+      background: var(--caramel);
+      padding: 30px 0;
+    }
+    .avantages .conteneur {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+      gap: 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
 
-.site-header {
-    width: 100%;
-    border-bottom: 1px solid var(--color-border);
-    background-color: var(--color-background);
-}
+    /* ========== 6. PRODUITS (Grid) ========== */
+    .produits { padding: 80px 0; }
+    .produits h2 {
+      font-size: 2.2rem;
+      color: var(--olive);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .carte {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+    /* Remplace ces dégradés par de vraies photos :
+       <img src="ma-photo.jpg" alt="..."> */
+    .carte .image { height: 220px; }
+    .image.a { background: linear-gradient(135deg, #f2b84b, #e98a4b); }
+    .image.b { background: linear-gradient(135deg, #7fa5c9, #1f2f4a); }
+    .image.c { background: linear-gradient(135deg, #e9b8a8, #c97a8a); }
+    .carte .infos { padding: 20px; }
+    .carte h3 { color: var(--chestnut); }
+    .carte .prix { margin-top: 8px; font-weight: bold; }
 
-.site-header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    /* ========== 7. NEWSLETTER ========== */
+    .newsletter {
+      background: var(--olive);
+      color: var(--fond);
+      text-align: center;
+      padding: 60px 0;
+    }
+    .newsletter form {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .newsletter input {
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: none;
+      min-width: 260px;
+      font-size: 1rem;
+    }
+    .newsletter button {
+      padding: 12px 28px;
+      border-radius: 999px;
+      border: none;
+      background: var(--copper);
+      color: var(--olive);
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 32px;
-}
+    /* ========== 8. PIED DE PAGE ========== */
+    footer {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 0.85rem;
+    }
 
-
-/* ========================================
-   3. Logo and website name
-======================================== */
-
-
-.site-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-
-    color: var(--color-brand);
-    font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
-
-    flex-shrink: 0;
-    text-decoration: none;
-}
-
-.site-brand img {
-    display: block;
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-}
-
-.site-brand__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.05;
-}
-
-.site-brand__name {
-    font-size: 28px;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.site-brand__descriptor {
-    font-size: 19px;
-    font-weight: 700;
-    font-style: italic;
-}
-
-
-/* ========================================
-   4. Main navigation
-======================================== */
-
-.primary-navigation {
-    margin-left: auto;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    display: inline-block;
-    padding: 8px 0;
-
-    color: var(--color-text);
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.nav-link:hover,
-.nav-link:focus-visible {
-    color: var(--color-accent);
-}
-
-
-/* ========================================
-   5. Publications dropdown
-======================================== */
-
-.dropdown-toggle {
-    border: 0;
-    background: none;
-    cursor: pointer;
-}
-
-.dropdown-toggle::after {
-    content: " ▾";
-    font-size: 12px;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-
-    min-width: 220px;
-    margin: 0;
-    padding: 8px 0;
-
-    list-style: none;
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 16px;
-    font-size: 14px;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible {
-    color: var(--color-accent);
-    background-color: rgba(206, 121, 58, 0.12);
-}
-
-/* Show the dropdown on hover or keyboard focus */
-.nav-item--dropdown:hover .dropdown-menu,
-.nav-item--dropdown:focus-within .dropdown-menu {
-    display: block;
-}
-
-
-/* ========================================
-   6. Mobile menu button
-======================================== */
-
-.menu-toggle {
-    display: none;
-    border: 0;
-    background: none;
-    cursor: pointer;
-}
-
-/* Section headings */
-.publication-section h2 {
-    color: var(--color-heading);
-}
-
-
-/* Search button */
-.search-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 36px;
-    height: 36px;
-    padding: 0;
-
-    border: none;
-    background: transparent;
-    color: var(--color-text);
-    cursor: pointer;
-}
-
-.search-button:hover,
-.search-button:focus-visible {
-    color: var(--color-accent);
-}
-
-
+    /* ========== 9. RESPONSIVE ==========
+       Sur écran de moins de 800px (téléphone), on réorganise. */
+    @media (max-width: 800px) {
+      nav { display: none; }                       /* menu caché pour simplifier */
+      .avantages .conteneur { grid-template-columns: repeat(2, 1fr); }
+      .grille { grid-template-columns: 1fr; }      /* 1 produit par ligne */
+      .heros { padding: 60px 0 50px; }
+    }
