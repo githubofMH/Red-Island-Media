@@ -47,6 +47,35 @@ header .conteneur {
 nav { display: flex; gap: 32px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; }
 nav a:hover { color: var(--caramel); }
 
+/* Menu déroulant */
+.menu-deroulant { position: relative; }   /* sert de repère au sous-menu */
+
+.sous-menu {
+  display: none;                          /* caché par défaut */
+  position: absolute;                     /* se superpose au contenu */
+  top: 100%;                              /* juste sous le lien */
+  left: 0;
+  min-width: 230px;
+  flex-direction: column;
+  background: var(--chestnut);
+  border-top: 3px solid var(--caramel);
+  border-radius: 0 0 12px 12px;
+  padding: 8px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 10;                            /* passe devant le reste de la page */
+}
+
+/* Il apparaît au survol, ou au clavier (touche Tab) */
+.menu-deroulant:hover .sous-menu,
+.menu-deroulant:focus-within .sous-menu {
+  display: flex;
+}
+
+.sous-menu a {
+  padding: 10px 20px;
+  white-space: nowrap;                    /* évite de couper « Behind the Headlines » */
+}
+
 /* ========== 4. HÉROS ========== */
 .heros {
   text-align: center;
