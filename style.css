@@ -109,6 +109,7 @@ nav a:hover { color: var(--caramel); }
   background: var(--caramel);
   color: var(--chestnut);
   padding: 30px 0;
+  margin-bottom: 60px;
 }
 .sujets .conteneur {
   display: grid;
