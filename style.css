@@ -38,7 +38,18 @@ a { color: inherit; text-decoration: none; }
 header {
   background: var(--chestnut);
   color: var(--fond);
+  position: relative;
 }
+
+.burger {
+  display: none;                 /* caché sur ordinateur */
+  background: none;
+  border: none;
+  color: var(--fond);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 header .conteneur {
   display: flex;                  /* aligne les éléments sur une ligne */
   justify-content: space-between; /* un à gauche, un à droite */
@@ -199,8 +210,31 @@ footer {
 /* ========== 9. RESPONSIVE ==========
    Sur écran de moins de 800px (téléphone), on réorganise. */
 @media (max-width: 800px) {
-  nav { display: none; }                      /* menu caché pour simplifier */
   .sujets .conteneur { grid-template-columns: repeat(2, 1fr); }
   .grille { grid-template-columns: 1fr; }     /* 1 article par ligne */
   .heros { padding: 60px 0 50px; }
+
+  .burger { display: block; }                 /* le bouton ☰ apparaît */
+
+  nav {
+    display: none;                            /* fermé par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--chestnut);
+    padding: 20px 5%;
+    gap: 16px;
+    z-index: 20;
+  }
+  nav.ouvert { display: flex; }               /* ouvert après un clic sur ☰ */
+
+  .sous-menu {
+    position: static;
+    display: flex;
+    box-shadow: none;
+    border-top: none;
+    padding: 8px 0 0 16px;
+  }
 }
