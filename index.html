@@ -31,6 +31,7 @@
         <a href="#discussions">Discussions</a>
         <a href="about.html">About</a>
       </nav>
+     <button class="burger" aria-label="Menu">☰</button>
     </div>
   </header>
 
@@ -101,6 +102,11 @@
   <footer>
     © 2026 Red Island Media – All rights reserved
   </footer>
-
+ 
+<script>
+  document.querySelector('.burger').addEventListener('click', function () {
+    document.querySelector('nav').classList.toggle('ouvert');
+  });
+</script>
 </body>
 </html>
