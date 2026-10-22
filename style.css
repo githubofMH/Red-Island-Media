@@ -103,6 +103,7 @@ nav a:hover { color: var(--caramel); }
   max-width: 560px;
   margin: 20px auto 32px;
   font-size: 1.25rem;
+  text-wrap: balance;
 }
 .bouton {
   display: inline-block;
