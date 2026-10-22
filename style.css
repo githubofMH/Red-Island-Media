@@ -125,8 +125,7 @@ nav a:hover { color: var(--caramel); }
 
 /* ========== 6. ARTICLES (Grid) ========== */
 .articles { 
-   padding: 80px 0; 
-   margin-bottom: 40px;
+   padding: 80px 0;
 }
 .articles h2 {
   font-size: 2.4rem;
@@ -137,6 +136,7 @@ nav a:hover { color: var(--caramel); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin-bottom: 80px;
 }
 .carte {
   background: white;
@@ -159,7 +159,7 @@ nav a:hover { color: var(--caramel); }
   background: var(--chestnut);
   color: var(--fond);
   text-align: center;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 .newsletter h2 { font-size: 2.2rem; }
 .newsletter form {
