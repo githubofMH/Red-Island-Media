@@ -1,0 +1,47 @@
+/* ===== Réservé à la page Publications =====
+   Chargé APRÈS style.css : il hérite de tes couleurs, de tes polices,
+   du header, des cartes (.carte) et de la grille (.grille). */
+
+/* Défilement en douceur quand on clique sur une option du menu déroulant */
+/* pub refers to publications sections */
+
+html { scroll-behavior: smooth; }
+
+/* ----- Titre de la page ----- */
+.pub-entete {
+  padding: 80px 0 30px;
+  text-align: center;
+}
+.pub-entete h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: var(--chestnut);
+  line-height: 1.1;
+}
+.pub-entete p {
+  max-width: 560px;
+  margin: 16px auto 0;
+  font-size: 1.2rem;
+}
+
+/* ----- Une section de publications ----- */
+.pub {
+  padding: 50px 0;
+}
+.pub + .pub {
+  border-top: 2px solid var(--caramel);   /* trait de séparation entre les sections */
+}
+.pub h2 {
+  font-size: 2rem;
+  color: var(--chestnut);
+  margin-bottom: 6px;
+}
+.pub .description {
+  margin-bottom: 30px;
+}
+/* On annule ici l'espace sous la grille prévu pour l'accueil */
+.pub .grille {
+  margin-bottom: 0;
+}
+
+/* Un peu d'air avant le footer */
+main { padding-bottom: 40px; }
