@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Island Media</title>
+
+  <!-- Ordre important : le CSS commun d'abord, puis celui de cette page -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="publications.css">
+
+  <!-- Google Fonts : remplace cette ligne par celle de ton index.html si elle est différente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="conteneur">
+      <a href="index.html" class="logo">Red Island Media</a>
+      <nav>
+        <div class="menu-deroulant">
+          <a href="publications.html">Publications ▾</a>
+          <div class="sous-menu">
+            <a href="publications.html">All</a>
+            <a href="publications.html/behind-the-headlines">Behind the Headlines</a>
+            <a href="publications.html/data-insights">Data Insights</a>
+          </div>
+        </div>
+        <a href="#">Podcast</a>
+        <a href="#">Discussions</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Titre de la page : c'est ce que "All" affiche -->
+    <section class="pub-entete">
+      <div class="conteneur">
+        <h1>Publications</h1>
+        <p>Our latest publications on Madagascar's economy. Stay informed, reflect, discuss and take action</p>
+      </div>
+    </section>
+
+    <section class="pub" id="behind-the-headlines">
+      
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Red Island Media – All rights reserved
+  </footer>
+
+  <script>
+    document.querySelector('.burger').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('ouvert');
+    });
+  </script>
+
+</body>
+</html>
