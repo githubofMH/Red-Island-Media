@@ -208,7 +208,15 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ========== 9. RESPONSIVE ==========
+/* ===== Page d'article ===== */
+.article-page { width: min(720px, 90%); margin: 0 auto; padding: 60px 0; }
+.article-page h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--chestnut); line-height: 1.15; margin-bottom: 12px; }
+.article-page .meta { font-size: 0.95rem; margin-bottom: 30px; }
+.article-page img { width: 100%; border-radius: 16px; margin-bottom: 30px; }
+.article-page h2 { font-size: 1.8rem; color: var(--chestnut); margin: 40px 0 12px; }
+.article-page p { margin-bottom: 18px; line-height: 1.7; }
+
+/* ========== RESPONSIVE ==========
    Sur écran de moins de 800px (téléphone), on réorganise. */
 @media (max-width: 800px) {
   .sujets .conteneur { grid-template-columns: repeat(2, 1fr); }
