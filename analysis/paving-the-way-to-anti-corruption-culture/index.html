@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titre de l'article – Red Island Media</title>
+  <link rel="stylesheet" href="../../style.css">
+  <!-- recopie ici tes lignes Google Fonts -->
+</head>
+<body>
 
+  <header>
+    <div class="conteneur">
+      <a href="../../index.html" class="logo">Red Island Media</a>
+      <nav>
+        <div class="menu-deroulant">
+          <a href="../../publications.html">Publications ▾</a>
+          <div class="sous-menu">
+            <a href="../../publications.html">All</a>
+            <a href="../../publications.html?cat=behind-the-headlines">Behind the Headlines</a>
+            <a href="../../publications.html?cat=data-insights">Data Insights</a>
+          </div>
+        </div>
+        <a href="#">Podcast</a>
+        <a href="#">Discussions</a>
+        <a href="../../about.html">About</a>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="article-page">
+    <h1>Titre de l'article</h1>
+    <p class="meta">Mathieu Houpier · 23 October 2026</p>
+    <img src="Baobab Illustration.png" alt="Description de la photo">
+
+    <p>Ton premier paragraphe...</p>
+
+    <h2>Un sous-titre</h2>
+    <p>Ton texte...</p>
+  </main>
+
+  <footer>
+    © 2026 Red Island Media – All rights reserved
+  </footer>
+
+  <script>
+    document.querySelector('.burger').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('ouvert');
+    });
+  </script>
+
+</body>
+</html>
