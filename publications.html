@@ -25,8 +25,8 @@
           <a href="publications.html">Publications ▾</a>
           <div class="sous-menu">
             <a href="publications.html">All</a>
-            <a href="publications.html/behind-the-headlines">Behind the Headlines</a>
-            <a href="publications.html/data-insights">Data Insights</a>
+            <a href="publications.html?cat=behind-the-headlines">Behind the Headlines</a>
+            <a href="publications.html?cat=data-insights">Data Insights</a>
           </div>
         </div>
         <a href="#">Podcast</a>
@@ -36,22 +36,101 @@
       <button class="burger" aria-label="Menu">☰</button>
     </div>
   </header>
+  
+<main>
 
-  <main>
+  <!-- 1. Titre + description -->
+  <section class="pub-entete">
+    <div class="conteneur">
+      <h1>Publications</h1>
+      <p>Our latest publications on Madagascar's economy. Stay informed, reflect, discuss and take action</p>
+    </div>
+  </section>
 
-    <!-- Titre de la page : c'est ce que "All" affiche -->
-    <section class="pub-entete">
-      <div class="conteneur">
-        <h1>Publications</h1>
-        <p>Our latest publications on Madagascar's economy. Stay informed, reflect, discuss and take action</p>
+  <!-- 2. Recherche + filtres -->
+  <section class="pub-outils">
+    <div class="conteneur">
+      <input type="search" id="recherche" placeholder="Search publications...">
+
+      <div class="filtres">
+        <button class="filtre actif" data-categorie="all">All</button>
+        <button class="filtre" data-categorie="behind-the-headlines">Behind the Headlines</button>
+        <button class="filtre" data-categorie="data-insights">Data Insights</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="pub" id="behind-the-headlines">
-      
-    </section>
+  <!-- 3. Toutes les publications, mélangées, la plus récente en premier -->
+  <section class="pub-liste">
+    <div class="conteneur">
+      <div class="grille" id="liste">
 
-  </main>
+        <article class="carte" data-categorie="data-insights">
+          <a href="article-2.html">
+            <img src="images/logo.png" alt="Article title">
+            <div class="infos">
+              <p class="categorie">Data Insights</p>
+              <h3>Article title</h3>
+              <p>20 Oct 2026</p>
+              <p>Mathieu Houpier</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="carte" data-categorie="behind-the-headlines">
+          ...
+        </article>
+
+      </div>
+      <p id="aucun-resultat" hidden>No publication found.</p>
+    </div>
+  </section>
+
+</main>
+
+
+  <!--Java for the filter search bar -->
+  <script>
+  const champ = document.getElementById('recherche');
+  const boutons = document.querySelectorAll('.filtre');
+  const cartes = document.querySelectorAll('#liste .carte');
+  const message = document.getElementById('aucun-resultat');
+  let categorie = 'all';
+
+  function filtrer() {
+    const texte = champ.value.toLowerCase().trim();
+    let visibles = 0;
+
+    cartes.forEach(function (carte) {
+      const bonneCategorie = categorie === 'all' || carte.dataset.categorie === categorie;
+      const bonTexte = carte.textContent.toLowerCase().includes(texte);
+      const afficher = bonneCategorie && bonTexte;
+      carte.hidden = !afficher;
+      if (afficher) visibles++;
+    });
+
+    message.hidden = visibles > 0;
+  }
+
+  champ.addEventListener('input', filtrer);
+
+  boutons.forEach(function (bouton) {
+    bouton.addEventListener('click', function () {
+      categorie = bouton.dataset.categorie;
+      boutons.forEach(function (b) { b.classList.remove('actif'); });
+      bouton.classList.add('actif');
+      filtrer();
+    });
+  });
+
+  // Permet d'arriver depuis le menu avec publications.html?cat=data-insights
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('cat')) {
+    const cible = document.querySelector('.filtre[data-categorie="' + params.get('cat') + '"]');
+    if (cible) cible.click();
+  }
+</script>
+  
 
   <footer>
     © 2026 Red Island Media – All rights reserved
