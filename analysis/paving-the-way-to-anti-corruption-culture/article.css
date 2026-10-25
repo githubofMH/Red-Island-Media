@@ -3,13 +3,6 @@
    À charger APRÈS style.css, qui fournit les couleurs (:root),
    la police et le header.
 
-   TEST DE CHARGEMENT : retire les /* et */ autour de la ligne suivante.
-   Si une bordure rouge entoure la page, ce fichier est bien lu.
-   (Remets les commentaires ensuite.) */
-
-body { border: 10px solid red; }
-
-
 /* ========== 1. LE TEXTE DE L'ARTICLE ========== */
 
 .article-page {
