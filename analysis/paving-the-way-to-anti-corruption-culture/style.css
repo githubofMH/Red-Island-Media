@@ -74,6 +74,32 @@
   color: var(--chestnut);
 }
 
+/* ===== Encadré de références ===== */
+.references {
+  border: 2px solid var(--caramel);     /* seulement le contour est coloré */
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 40px 0;
+  font-size: 0.95rem;
+}
+.references h3 {
+  color: var(--chestnut);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+.references p {
+  margin: 0 0 12px;
+  padding-left: 2em;                    /* retrait : la 1re ligne dépasse à gauche */
+  text-indent: -2em;
+  line-height: 1.5;
+}
+.references a {
+  color: var(--copper);                 /* ton reset enlève le style des liens */
+  text-decoration: underline;
+  overflow-wrap: anywhere;              /* coupe les longues URL au lieu de déborder */
+}
+.references a:hover { color: var(--chestnut); }
+
 /* Un peu plus compact sur téléphone */
 @media (max-width: 800px) {
   .definition { gap: 16px; padding: 20px; }
