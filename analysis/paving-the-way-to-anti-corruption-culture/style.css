@@ -108,6 +108,6 @@
 /* Un peu plus compact sur téléphone */
 @media (max-width: 800px) {
   .definition { gap: 16px; padding: 20px; }
-  article-page > p { text-align: left; }   /* sur téléphone, retour à l'alignement à gauche */
+  .article-page > p { text-align: left; }   /* sur téléphone, retour à l'alignement à gauche */
   .definition-icone { width: 36px; height: 36px; }
 }
