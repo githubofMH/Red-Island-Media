@@ -86,7 +86,7 @@ nav a:hover { color: var(--caramel); }
 
 .sous-menu a {
   padding: 10px 20px;
-  white-space: nowrap;                    /* évite de couper « Behind the Headlines » */
+  white-space: nowrap;                    /* évite de couper « beyound the Headlines » */
 }
 
 /* ========== 4. HÉROS ========== */
