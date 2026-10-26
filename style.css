@@ -216,6 +216,16 @@ footer {
 .article-page h2 { font-size: 1.8rem; color: var(--chestnut); margin: 40px 0 12px; }
 .article-page p { margin-bottom: 18px; line-height: 1.7; }
 
+
+/* ========== Langue ==========
+   On ajoute un bouton de langue plus beau. */
+nav .langue {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-weight: 700;
+}
+
 /* ========== RESPONSIVE ==========
    Sur écran de moins de 800px (téléphone), on réorganise. */
 @media (max-width: 800px) {
