@@ -1,0 +1,172 @@
+/* ===== article.css =====
+   Mise en page de TOUTES les pages d'articles.
+   À charger APRÈS style.css, qui fournit les couleurs (:root),
+   la police et le header.
+
+/* ========== 1. LE TEXTE DE L'ARTICLE ========== */
+
+.article-page {
+  width: min(720px, 90%);     /* colonne de lecture confortable */
+  margin: 0 auto;             /* centrée */
+  padding: 60px 0;
+}
+
+.article-page h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--chestnut);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.article-page .meta {         /* ligne « auteur · date » */
+  font-size: 0.95rem;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.article-page h2 {
+  font-size: 1.8rem;
+  color: var(--chestnut);
+  margin: 40px 0 12px;
+}
+
+/* Paragraphes du texte principal (pas ceux des encadrés, grâce au « > ») */
+.article-page > p {
+  text-align: justify;
+  hyphens: auto;              /* demande lang="en" dans <html> */
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.article-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 30px 0;
+}
+
+/* Listes à puces */
+.article-page ul,
+.article-page ol {
+  margin: 0 0 18px 24px;
+  padding-left: 16px;
+}
+.article-page li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.article-page li::marker {
+  color: var(--copper);
+}
+
+
+/* ========== 2. ENCADRÉ DE DÉFINITION (icône + texte) ========== */
+
+.definition {
+  display: grid;
+  grid-template-columns: auto 1fr;   /* colonne icône + colonne texte */
+  gap: 24px;
+  align-items: center;
+  background: var(--olive);
+  color: var(--chestnut);            /* l'icône reprend cette couleur */
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 30px 0;
+}
+.definition-texte h3 {
+  color: var(--chestnut);
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.definition-texte p {
+  color: var(--texte);
+  font-style: italic;
+  text-align: left;
+  margin: 0 0 6px;
+}
+.definition-texte .source {
+  text-align: right;
+  font-size: 0.95rem;
+  margin: 8px 0 0;
+}
+
+
+/* ========== 3. ENCADRÉ DE MODÈLE (formule, liste, effet) ========== */
+
+.modele {
+  background: var(--olive);
+  color: var(--texte);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 30px 0;
+}
+.modele h3 {
+  color: var(--chestnut);
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+.modele p {
+  text-align: justify;
+  margin: 0 0 14px;
+}
+.modele .formule {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+.modele ul {
+  margin: 0 0 14px 22px;
+  padding-left: 12px;
+}
+.modele li {
+  margin-bottom: 4px;
+}
+.accent {
+  color: var(--chestnut);
+}
+
+
+/* ========== 4. ENCADRÉ DE RÉFÉRENCES (seulement le contour) ========== */
+
+.references {
+  border: 2px solid var(--caramel);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 40px 0;
+  font-size: 0.95rem;
+}
+.references h3 {
+  color: var(--chestnut);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+.references p {
+  padding-left: 2em;                 /* retrait : la 1re ligne dépasse à gauche */
+  text-indent: -2em;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.references a {
+  color: var(--copper);
+  text-decoration: underline;
+  overflow-wrap: anywhere;           /* coupe les longues adresses */
+}
+.references a:hover {
+  color: var(--chestnut);
+}
+
+
+/* ========== 5. TÉLÉPHONE (toujours à la fin du fichier) ========== */
+
+@media (max-width: 800px) {
+  .article-page > p { text-align: left; hyphens: manual; }
+  .modele p { text-align: left; }
+  .definition { gap: 16px; padding: 20px; }
+  .definition-icone { width: 36px; height: 36px; }
+  .modele { padding: 20px; }
+}
