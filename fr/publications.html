@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Island Media</title>
 
+  <!-- Ordre important : le CSS commun d'abord, puis celui de cette page -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="publications.css">
+
+  <!-- Google Fonts : remplace cette ligne par celle de ton index.html si elle est différente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="site-header" data-racine="" data-traduction="oui"></div> <!--Calls the json header-->
+<script src="header.js"></script> <!--Calls the json header-->
+  
+<main>
+
+  <!-- 1. Titre + description -->
+  <section class="pub-entete">
+    <div class="conteneur">
+      <h1>Publications</h1>
+      <p>Nos dernières publications sur les sujets économiques à Madagascar. S'informer, réfléchir, discuter puis agir</p>
+    </div>
+  </section>
+
+  <!-- 2. Recherche + filtres -->
+  <section class="pub-outils">
+    <div class="conteneur">
+      <input type="search" id="recherche" placeholder="Search publications...">
+
+      <div class="filtres">
+        <button class="filtre actif" data-categorie="all">Tous</button>
+        <button class="filtre" data-categorie="beyound-the-headlines">Au-delà des Gros Titres</button>
+        <button class="filtre" data-categorie="data-insights">Data Insights</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Toutes les publications, mélangées, la plus récente en premier -->
+  <section class="pub-liste">
+    <div class="conteneur">
+      <div class="grille" id="liste">
+<article class="carte" data-categorie="beyound-the-headlines">
+    <a href="analysis/paving-the-way-to-anti-corruption-culture/index.html">
+          <img src="analysis/paving-the-way-to-anti-corruption-culture/Baobab Illustration.png" alt="Baobab illustration">
+      <div class="infos">
+          <p class="categorie">Au-delà des Gros Titres</p>
+          <h3>Torohy le Nouvel Outil de Lutte Contre la Corruption</h3>
+          <p>23 Oct 2026</p>
+          <p>M.H</p>
+      </div>
+    </a>
+</article>
+          </a>
+        </article>
+
+        <article class="carte" data-categorie="beyound-the-headlines">
+          ...
+        </article>
+
+      </div>
+      <p id="aucun-resultat" hidden>No publication found.</p>
+    </div>
+  </section>
+
+</main>
+
+
+  <!--Java for the filter search bar -->
+  <script>
+  const champ = document.getElementById('recherche');
+  const boutons = document.querySelectorAll('.filtre');
+  const cartes = document.querySelectorAll('#liste .carte');
+  const message = document.getElementById('aucun-resultat');
+  let categorie = 'all';
+
+  function filtrer() {
+    const texte = champ.value.toLowerCase().trim();
+    let visibles = 0;
+
+    cartes.forEach(function (carte) {
+      const bonneCategorie = categorie === 'all' || carte.dataset.categorie === categorie;
+      const bonTexte = carte.textContent.toLowerCase().includes(texte);
+      const afficher = bonneCategorie && bonTexte;
+      carte.hidden = !afficher;
+      if (afficher) visibles++;
+    });
+
+    message.hidden = visibles > 0;
+  }
+
+  champ.addEventListener('input', filtrer);
+
+  boutons.forEach(function (bouton) {
+    bouton.addEventListener('click', function () {
+      categorie = bouton.dataset.categorie;
+      boutons.forEach(function (b) { b.classList.remove('actif'); });
+      bouton.classList.add('actif');
+      filtrer();
+    });
+  });
+
+  // Permet d'arriver depuis le menu avec publications.html?cat=data-insights
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('cat')) {
+    const cible = document.querySelector('.filtre[data-categorie="' + params.get('cat') + '"]');
+    if (cible) cible.click();
+  }
+</script>
+  
+  <footer>
+    © 2026 Red Island Media – All rights reserved
+  </footer>
+
+</body>
+</html>
