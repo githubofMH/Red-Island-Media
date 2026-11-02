@@ -226,6 +226,9 @@ nav .langue {
   font-weight: 700;
 }
 
+footer a { text-decoration: underline; }
+footer a:hover { color: var(--copper); }
+
 /* ========== RESPONSIVE ==========
    Sur écran de moins de 800px (téléphone), on réorganise. */
 @media (max-width: 800px) {
