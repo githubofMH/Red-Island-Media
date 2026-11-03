@@ -23,7 +23,7 @@
     en: {
       publications: 'Publications',
       all: 'All',
-      beyond: 'Beyound the Headlines',
+      beyond: 'Beyond the Headlines',
       data: 'Data Insights',
       about: 'About',
       autre: 'fr',
@@ -62,7 +62,7 @@
             <a href="${r}publications.html">${t.publications} ▾</a>
             <div class="sous-menu">
               <a href="${r}publications.html">${t.all}</a>
-              <a href="${r}publications.html?cat=beyound-the-headlines">${t.beyond}</a>
+              <a href="${r}publications.html?cat=beyond-the-headlines">${t.beyond}</a>
               <a href="${r}publications.html?cat=data-insights">${t.data}</a>
             </div>
           </div>
