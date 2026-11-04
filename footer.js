@@ -17,8 +17,16 @@
   const langue = document.documentElement.lang === 'fr' ? 'fr' : 'en';
 
   const textes = {
-    en: { droits: 'All rights reserved', mentions: 'Legal notice' },
-    fr: { droits: 'Tous droits réservés', mentions: 'Mentions légales' }
+    en: {
+      droits: 'All rights reserved',
+      mentions: 'Legal notice',
+      confidentialite: 'Privacy policy'
+    },
+    fr: {
+      droits: 'Tous droits réservés',
+      mentions: 'Mentions légales',
+      confidentialite: 'Politique de confidentialité'
+    }
   };
   const t = textes[langue];
 
@@ -26,7 +34,8 @@
 
   emplacement.outerHTML = `
     <footer>
-      © ${annee} Red Island Media – ${t.droits} ·
-      <a href="${r}mentions-legales.html">${t.mentions}</a>
+      © ${annee} Red Island Media – ${t.droits}<br>
+      <a href="${r}mentions-legales.html">${t.mentions}</a> ·
+      <a href="${r}privacy-policy.html">${t.confidentialite}</a>
     </footer>`;
 })();
