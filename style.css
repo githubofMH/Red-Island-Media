@@ -201,6 +201,14 @@ nav a:hover { color: var(--caramel); }
   cursor: pointer;
 }
 
+.newsletter iframe {
+  display: block;
+  width: 100%;
+  max-width: 540px;      /* ne dépasse jamais cette largeur */
+  margin: 20px auto 0;   /* centré, avec un peu d'espace au-dessus */
+  border: 0;
+}
+
 /* ========== 8. PIED DE PAGE ========== */
 footer {
   text-align: center;
