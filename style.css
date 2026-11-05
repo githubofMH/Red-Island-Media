@@ -182,9 +182,10 @@ nav a:hover { color: var(--caramel); }
   display: block;
   width: 100%;
   max-width: 540px;
-  height: 480px;          /* à ajuster jusqu'à ce que le bouton soit entièrement visible */
+  height: 350px;          /* à ajuster jusqu'à ce que le bouton soit entièrement visible */
   margin: 24px auto 0;
   border: 0;
+  outline: 2px solid red;
 }
 
 /* ========== 8. PIED DE PAGE ========== */
