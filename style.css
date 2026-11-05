@@ -179,19 +179,19 @@ nav a:hover { color: var(--caramel); }
 }
 
 .newsletter-cadre {
-  max-width: 500px;
-  height: 240px;          /* hauteur visible : celle du formulaire seul */
-  margin: 14px auto 0;
-  overflow: hidden;       /* tout ce qui dépasse est coupé */
+  max-width: 500px;       /* largeur visible du formulaire (540 - 2 × 20 px de marge rose) */
+  height: 270px;          /* hauteur visible : coupe le bas */
+  margin: 16px auto 0;
+  overflow: hidden;       /* coupe tout ce qui dépasse, sur les 4 côtés */
 }
 .newsletter-cadre iframe {
   display: block;
-  width: 100%;
-  height: 340px;          /* = hauteur visible + 2 × 41 px de marge rose */
-  margin-top: -41px;      /* remonte l'iframe : la marge du haut sort du cadre */
+  width: calc(100% + 40px);   /* plus large que le cadre : 20 px de chaque côté */
+  height: 352px;              /* hauteur du cadre + 82 px */
+  margin-left: -20px;         /* décale vers la gauche : la marge gauche sort du cadre */
+  margin-top: -41px;          /* décale vers le haut : la marge haute sort du cadre */
   border: 0;
 }
-
 /* ========== 8. PIED DE PAGE ========== */
 footer {
   text-align: center;
