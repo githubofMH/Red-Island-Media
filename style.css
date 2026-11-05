@@ -229,8 +229,8 @@ footer a:hover { color: var(--copper); }
 
   .burger { display: block; }                 /* le bouton ☰ apparaît */
    
-  ..newsletter-cadre { height: 330px; }      /* à ajuster : le texte passe sur plus de lignes */
-  .newsletter-cadre iframe { height: 412px; }
+  ..newsletter-cadre { height: 340px; }      /* à ajuster : le texte passe sur plus de lignes */
+  .newsletter-cadre iframe { height: 422px; }
    
   nav {
     display: none;                            /* fermé par défaut */
