@@ -180,7 +180,7 @@ nav a:hover { color: var(--caramel); }
 
 .newsletter-cadre {
   max-width: 500px;       /* largeur visible du formulaire (540 - 2 × 20 px de marge rose) */
-  height: 270px;          /* hauteur visible : coupe le bas */
+  height: 260px;          /* hauteur visible : coupe le bas */
   margin: 16px auto 0;
   overflow: hidden;       /* coupe tout ce qui dépasse, sur les 4 côtés */
 }
