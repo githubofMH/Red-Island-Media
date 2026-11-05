@@ -167,45 +167,23 @@ nav a:hover { color: var(--caramel); }
 .carte .infos p { font-size: 0.95rem; margin-top: 6px; }
 
 /* ========== 7. NEWSLETTER ========== */
+/* ===== Newsletter (formulaire Brevo dans un iframe) ===== */
 .newsletter {
   background: var(--chestnut);
   color: var(--fond);
   text-align: center;
   padding: 50px 0;
 }
-.newsletter h2 { font-size: 2.2rem; }
-.newsletter form {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.newsletter input {
-  padding: 12px 20px;
-  border-radius: 999px;
-  border: none;
-  min-width: 260px;
-  font-size: 1rem;
-  font-family: inherit;  /* les champs n'héritent pas la police tout seuls */
-}
-.newsletter button {
-  padding: 12px 28px;
-  border-radius: 999px;
-  border: none;
-  background: var(--caramel);
-  color: var(--chestnut);
-  font-weight: 700;
-  font-size: 1rem;
-  font-family: inherit;
-  cursor: pointer;
+.newsletter h2 {
+  font-size: 2.2rem;
 }
 
 .newsletter iframe {
   display: block;
   width: 100%;
-  max-width: 540px;      /* ne dépasse jamais cette largeur */
-  margin: 20px auto 0;   /* centré, avec un peu d'espace au-dessus */
+  max-width: 540px;
+  height: 480px;          /* à ajuster jusqu'à ce que le bouton soit entièrement visible */
+  margin: 24px auto 0;
   border: 0;
 }
 
@@ -245,7 +223,9 @@ footer a:hover { color: var(--copper); }
   .heros { padding: 60px 0 50px; }
 
   .burger { display: block; }                 /* le bouton ☰ apparaît */
-
+   
+  .newsletter iframe { height: 560px; }
+   
   nav {
     display: none;                            /* fermé par défaut */
     flex-direction: column;
