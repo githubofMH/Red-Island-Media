@@ -164,8 +164,11 @@
 /* ========== 5. TÉLÉPHONE (toujours à la fin du fichier) ========== */
 
 @media (max-width: 800px) {
-  .article-page > p { text-align: left; hyphens: manual; }
-  .modele p { text-align: left; }
+  .article-page > p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;   /* pour Safari sur iPhone */
+}
   .definition { gap: 16px; padding: 20px; }
   .definition-icone { width: 36px; height: 36px; }
   .modele { padding: 20px; }
