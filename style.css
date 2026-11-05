@@ -178,14 +178,18 @@ nav a:hover { color: var(--caramel); }
   font-size: 2.2rem;
 }
 
-.newsletter iframe {
+.newsletter-cadre {
+  max-width: 540px;
+  height: 270px;          /* hauteur visible : celle du formulaire seul */
+  margin: 16px auto 0;
+  overflow: hidden;       /* tout ce qui dépasse est coupé */
+}
+.newsletter-cadre iframe {
   display: block;
   width: 100%;
-  max-width: 540px;
-  height: 350px;          /* à ajuster jusqu'à ce que le bouton soit entièrement visible */
-  margin: 24px auto 0;
+  height: 352px;          /* = hauteur visible + 2 × 41 px de marge rose */
+  margin-top: -41px;      /* remonte l'iframe : la marge du haut sort du cadre */
   border: 0;
-  outline: 2px solid red;
 }
 
 /* ========== 8. PIED DE PAGE ========== */
@@ -225,7 +229,8 @@ footer a:hover { color: var(--copper); }
 
   .burger { display: block; }                 /* le bouton ☰ apparaît */
    
-  .newsletter iframe { height: 560px; }
+  ..newsletter-cadre { height: 330px; }      /* à ajuster : le texte passe sur plus de lignes */
+  .newsletter-cadre iframe { height: 412px; }
    
   nav {
     display: none;                            /* fermé par défaut */
